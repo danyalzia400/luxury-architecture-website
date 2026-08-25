@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Renovation | Luxury Architecture</title>
+
+    <meta name="description"
+        content="Thoughtful renovation and transformation of existing spaces into contemporary environments while respecting their original character.">
+
+        <header>
+
+                <a href="index.html" class="logo">
+                    LUXURY
+                </a>
+
+                <nav>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="index.html#services">
+                        Services
+                    </a>
+
+                    <a href="index.html#projects">
+                        Projects
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </nav>
+
+        </header>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f5;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            padding: 28px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 13px;
+            letter-spacing: 1px;
+
+            transition: opacity .3s ease;
+        }
+
+        nav a:hover {
+            opacity: .65;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 85vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 100px 6% 80px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, .35),
+                    rgba(0, 0, 0, .62)
+                ),
+                url("image/photo-1600607688969-a5bfcd646154.avif")
+                center / cover no-repeat;
+
+            color: #ffffff;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-number {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+            opacity: .8;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 125px);
+
+            line-height: .9;
+
+            font-weight: 400;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            max-width: 680px;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,.88);
+        }
+
+
+        /* =========================================
+           GENERAL SECTIONS
+        ========================================= */
+
+        .section {
+            padding: 120px 6%;
+        }
+
+        .section-number {
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #888;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .intro {
+            display: grid;
+
+            grid-template-columns: .7fr 1.3fr;
+
+            gap: 80px;
+        }
+
+        .intro h2 {
+            font-size: clamp(35px, 5vw, 65px);
+
+            font-weight: 400;
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 30px;
+        }
+
+        .intro-text p {
+            max-width: 750px;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            color: #666;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           EXPERTISE
+        ========================================= */
+
+        .expertise {
+            background: #171717;
+
+            color: #ffffff;
+        }
+
+        .expertise-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            margin-bottom: 70px;
+        }
+
+        .expertise-header h2 {
+            font-size: clamp(40px, 6vw, 75px);
+
+            font-weight: 400;
+
+            line-height: 1;
+        }
+
+        .expertise-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid rgba(255,255,255,.2);
+        }
+
+        .expertise-item {
+            padding: 40px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+
+        .expertise-item:nth-child(odd) {
+            padding-right: 60px;
+        }
+
+        .expertise-item:nth-child(even) {
+            padding-left: 60px;
+
+            border-left: 1px solid rgba(255,255,255,.2);
+        }
+
+        .expertise-number {
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            color: #999;
+
+            margin-bottom: 25px;
+        }
+
+        .expertise-item h3 {
+            font-size: 28px;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+        }
+
+        .expertise-item p {
+            color: #aaa;
+
+            max-width: 500px;
+        }
+
+
+        /* =========================================
+           RENOVATION TYPES
+        ========================================= */
+
+        .renovation-list {
+            border-top: 1px solid #d7d7d7;
+
+            margin-top: 60px;
+        }
+
+        .renovation-item {
+            display: grid;
+
+            grid-template-columns: 100px 1fr 1.5fr;
+
+            gap: 30px;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid #d7d7d7;
+        }
+
+        .renovation-number {
+            font-size: 13px;
+
+            color: #999;
+        }
+
+        .renovation-item h3 {
+            font-size: 25px;
+
+            font-weight: 400;
+        }
+
+        .renovation-item p {
+            color: #666;
+
+            max-width: 650px;
+        }
+
+
+        /* =========================================
+           PROCESS
+        ========================================= */
+
+        .process-header {
+            margin-bottom: 70px;
+        }
+
+        .process-header h2 {
+            font-size: clamp(40px, 6vw, 75px);
+
+            font-weight: 400;
+
+            line-height: 1;
+
+            margin-top: 15px;
+        }
+
+        .process {
+            border-top: 1px solid #d7d7d7;
+        }
+
+        .process-item {
+            display: grid;
+
+            grid-template-columns: 100px 1fr 2fr;
+
+            gap: 30px;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid #d7d7d7;
+        }
+
+        .process-number {
+            font-size: 13px;
+
+            color: #999;
+        }
+
+        .process-item h3 {
+            font-size: 24px;
+
+            font-weight: 400;
+        }
+
+        .process-item p {
+            color: #666;
+
+            max-width: 650px;
+        }
+
+
+        /* =========================================
+           FEATURED PROJECT
+        ========================================= */
+
+        .project-feature {
+            padding: 0 6% 120px;
+        }
+
+        .project-image {
+            width: 100%;
+
+            height: 650px;
+
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform .6s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .project-caption {
+            display: flex;
+
+            justify-content: space-between;
+
+            padding-top: 20px;
+        }
+
+        .project-caption h3 {
+            font-size: 25px;
+
+            font-weight: 400;
+        }
+
+        .project-caption span {
+            color: #888;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+            background: #deded9;
+
+            text-align: center;
+
+            padding: 130px 6%;
+        }
+
+        .cta h2 {
+            max-width: 900px;
+
+            margin: 0 auto 30px;
+
+            font-size: clamp(40px, 7vw, 85px);
+
+            font-weight: 400;
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+        }
+
+        .cta p {
+            max-width: 650px;
+
+            margin: 0 auto 35px;
+
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border: 1px solid #171717;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: all .3s ease;
+        }
+
+        .cta-button:hover {
+            background: #171717;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 60px 6%;
+        }
+
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+
+            letter-spacing: 2px;
+        }
+
+        .footer-text {
+            font-size: 12px;
+
+            color: #888;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 22px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 75vh;
+
+                padding: 80px 5% 55px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .section {
+                padding: 80px 5%;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .expertise-header {
+                display: block;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-item:nth-child(odd),
+            .expertise-item:nth-child(even) {
+                padding-left: 0;
+
+                padding-right: 0;
+
+                border-left: none;
+            }
+
+            .renovation-item {
+                grid-template-columns: 50px 1fr;
+
+                gap: 15px;
+            }
+
+            .renovation-item p {
+                grid-column: 2;
+            }
+
+            .process-item {
+                grid-template-columns: 50px 1fr;
+
+                gap: 15px;
+            }
+
+            .process-item p {
+                grid-column: 2;
+            }
+
+            .project-feature {
+                padding: 0 5% 80px;
+            }
+
+            .project-image {
+                height: 400px;
+            }
+
+            .project-caption {
+                display: block;
+            }
+
+            .project-caption span {
+                display: block;
+
+                margin-top: 8px;
+            }
+
+            .cta {
+                padding: 90px 5%;
+            }
+
+            .footer-content {
+                display: block;
+            }
+
+            .footer-text {
+                margin-top: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+            LUXURY
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#projects">
+                Projects
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-number">
+                05 — Renovation
+            </div>
+
+            <h1>
+                Renovation
+            </h1>
+
+            <p>
+                Thoughtful transformation of existing spaces into
+                contemporary environments while respecting their
+                original character.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRODUCTION
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="intro">
+
+            <div>
+
+                <div class="section-number">
+                    01 — Our Approach
+                </div>
+
+            </div>
+
+
+            <div class="intro-text">
+
+                <h2>
+                    Transforming
+                    what already exists.
+                </h2>
+
+                <p>
+                    Renovation is about more than simply changing a space.
+                    We study the existing architecture, understand its
+                    strengths and limitations, and develop thoughtful
+                    solutions for contemporary living.
+                </p>
+
+                <p>
+                    Our approach balances preservation and transformation,
+                    allowing existing spaces to gain new life while
+                    maintaining their identity and character.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         EXPERTISE
+    ========================================= -->
+
+    <section class="section expertise">
+
+        <div class="expertise-header">
+
+            <div class="section-number">
+                02 — Expertise
+            </div>
+
+            <h2>
+                What We Do
+            </h2>
+
+        </div>
+
+
+        <div class="expertise-grid">
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    01
+                </div>
+
+                <h3>
+                    Residential Renovation
+                </h3>
+
+                <p>
+                    Transforming existing homes into contemporary,
+                    comfortable and functional living environments.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    02
+                </div>
+
+                <h3>
+                    Interior Transformation
+                </h3>
+
+                <p>
+                    Reimagining existing interiors through improved
+                    layouts, materials, lighting and finishes.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    03
+                </div>
+
+                <h3>
+                    Façade Renovation
+                </h3>
+
+                <p>
+                    Updating building exteriors while creating a
+                    stronger architectural identity and contemporary appearance.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    04
+                </div>
+
+                <h3>
+                    Space Reconfiguration
+                </h3>
+
+                <p>
+                    Improving existing layouts to create better
+                    circulation, functionality and spatial relationships.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    05
+                </div>
+
+                <h3>
+                    Material Upgrades
+                </h3>
+
+                <p>
+                    Introducing carefully selected contemporary
+                    materials, finishes and architectural details.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    06
+                </div>
+
+                <h3>
+                    Renovation Visualization
+                </h3>
+
+                <p>
+                    Photorealistic visualizations showing how an
+                    existing property can look after transformation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RENOVATION TYPES
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="section-number">
+            03 — Renovation Services
+        </div>
+
+
+        <div class="renovation-list">
+
+
+            <div class="renovation-item">
+
+                <div class="renovation-number">
+                    01
+                </div>
+
+                <h3>
+                    Complete Home Renovation
+                </h3>
+
+                <p>
+                    A comprehensive transformation of an existing
+                    residence from planning through final design.
+                </p>
+
+            </div>
+
+
+            <div class="renovation-item">
+
+                <div class="renovation-number">
+                    02
+                </div>
+
+                <h3>
+                    Kitchen & Bathroom
+                </h3>
+
+                <p>
+                    Modernizing key spaces with improved layouts,
+                    finishes, storage and contemporary details.
+                </p>
+
+            </div>
+
+
+            <div class="renovation-item">
+
+                <div class="renovation-number">
+                    03
+                </div>
+
+                <h3>
+                    Exterior Transformation
+                </h3>
+
+                <p>
+                    Refreshing façades, entrances, boundary walls and
+                    outdoor areas to create a unified architectural identity.
+                </p>
+
+            </div>
+
+
+            <div class="renovation-item">
+
+                <div class="renovation-number">
+                    04
+                </div>
+
+                <h3>
+                    Interior Modernization
+                </h3>
+
+                <p>
+                    Updating existing interiors through spatial planning,
+                    materials, lighting and furniture.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROCESS
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="process-header">
+
+            <div class="section-number">
+                04 — Process
+            </div>
+
+            <h2>
+                From existing space
+                to renewed design.
+            </h2>
+
+        </div>
+
+
+        <div class="process">
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Existing Assessment
+                </h3>
+
+                <p>
+                    We study the existing property, its structure,
+                    layout, materials and opportunities for improvement.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Design Concept
+                </h3>
+
+                <p>
+                    A renovation concept is developed around the
+                    client's needs, architecture and desired lifestyle.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Design Development
+                </h3>
+
+                <p>
+                    Layouts, materials, finishes, architectural details
+                    and interior elements are carefully developed.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Visualization
+                </h3>
+
+                <p>
+                    Photorealistic renders communicate the proposed
+                    transformation before work begins.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    05
+                </div>
+
+                <h3>
+                    Final Design
+                </h3>
+
+                <p>
+                    The completed design brings the existing structure
+                    and new architectural direction together.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FEATURED PROJECT
+    ========================================= -->
+
+    <section class="project-feature">
+
+        <div class="project-image">
+
+            <img
+                src="image/photo-1600607688969-a5bfcd646154.avif"
+                alt="Renovated luxury residence">
+
+        </div>
+
+
+        <div class="project-caption">
+
+            <h3>
+                Residence Transformation
+            </h3>
+
+            <span>
+                Renovation & Architecture
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================= -->
+
+    <section class="cta">
+
+        <div class="section-number">
+            Start Your Renovation
+        </div>
+
+        <h2>
+            Give your existing
+            space a new life.
+        </h2>
+
+        <p>
+            Tell us about your existing property and what you would
+            like to transform. We can develop a design direction
+            tailored to your space.
+        </p>
+
+        <a href="consultation.html" class="cta-button">
+            Book a Consultation →
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                LUXURY
+            </div>
+
+            <div class="footer-text">
+                © 2026 Luxury Architecture. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

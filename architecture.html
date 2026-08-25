@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Architecture | Luxury Architecture</title>
+
+    <meta name="description"
+        content="Professional architectural design services including concept development, planning, detailed design and architectural documentation.">
+
+        <header>
+
+                <a href="index.html" class="logo">
+                    LUXURY
+                </a>
+
+                <nav>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="index.html#services">
+                        Services
+                    </a>
+
+                    <a href="index.html#projects">
+                        Projects
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                    
+
+                </nav>
+
+        </header>
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f5;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 28px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 13px;
+            letter-spacing: 1px;
+
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.65;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 85vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 100px 6% 80px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("image/photo-1600607688969-a5bfcd646154.avif")
+                center / cover no-repeat;
+
+            color: #ffffff;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-number {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 125px);
+            line-height: 0.9;
+            font-weight: 400;
+            letter-spacing: -4px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            max-width: 620px;
+
+            font-size: 17px;
+            line-height: 1.8;
+
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .section {
+            padding: 120px 6%;
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+
+            gap: 80px;
+        }
+
+        .section-number {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: #888;
+        }
+
+        .intro h2 {
+            font-size: clamp(35px, 5vw, 65px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -2px;
+
+            margin-bottom: 30px;
+        }
+
+        .intro-text p {
+            max-width: 750px;
+
+            font-size: 18px;
+            line-height: 1.9;
+
+            color: #666;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .expertise {
+            background: #171717;
+            color: #ffffff;
+        }
+
+        .expertise-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            margin-bottom: 70px;
+        }
+
+        .expertise-header h2 {
+            font-size: clamp(40px, 6vw, 75px);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .expertise-item {
+            padding: 40px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .expertise-item:nth-child(odd) {
+            padding-right: 60px;
+        }
+
+        .expertise-item:nth-child(even) {
+            padding-left: 60px;
+
+            border-left: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .expertise-number {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #999;
+
+            margin-bottom: 25px;
+        }
+
+        .expertise-item h3 {
+            font-size: 28px;
+            font-weight: 400;
+
+            margin-bottom: 15px;
+        }
+
+        .expertise-item p {
+            color: #aaa;
+
+            max-width: 500px;
+        }
+
+
+        /* =========================================
+           PROCESS
+        ========================================= */
+
+        .process-header {
+            margin-bottom: 70px;
+        }
+
+        .process-header h2 {
+            font-size: clamp(40px, 6vw, 75px);
+            font-weight: 400;
+            line-height: 1;
+
+            margin-top: 15px;
+        }
+
+        .process {
+            border-top: 1px solid #d7d7d7;
+        }
+
+        .process-item {
+            display: grid;
+            grid-template-columns: 100px 1fr 2fr;
+
+            gap: 30px;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid #d7d7d7;
+        }
+
+        .process-number {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .process-item h3 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .process-item p {
+            color: #666;
+            max-width: 650px;
+        }
+
+
+        /* =========================================
+           PROJECT IMAGE
+        ========================================= */
+
+        .project-feature {
+            padding: 0 6% 120px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 650px;
+
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.6s ease;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .project-caption {
+            display: flex;
+            justify-content: space-between;
+
+            padding-top: 20px;
+        }
+
+        .project-caption h3 {
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .project-caption span {
+            color: #888;
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+            background: #deded9;
+
+            text-align: center;
+
+            padding: 130px 6%;
+        }
+
+        .cta h2 {
+            max-width: 850px;
+
+            margin: 0 auto 30px;
+
+            font-size: clamp(40px, 7vw, 85px);
+
+            font-weight: 400;
+
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+
+        .cta p {
+            max-width: 600px;
+
+            margin: 0 auto 35px;
+
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border: 1px solid #171717;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #171717;
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 60px 6%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #888;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 22px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 75vh;
+
+                padding: 80px 5% 55px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .section {
+                padding: 80px 5%;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .expertise-header {
+                display: block;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-item:nth-child(odd),
+            .expertise-item:nth-child(even) {
+                padding-left: 0;
+                padding-right: 0;
+
+                border-left: none;
+            }
+
+            .process-item {
+                grid-template-columns: 50px 1fr;
+
+                gap: 15px;
+            }
+
+            .process-item p {
+                grid-column: 2;
+            }
+
+            .project-feature {
+                padding: 0 5% 80px;
+            }
+
+            .project-image {
+                height: 400px;
+            }
+
+            .project-caption {
+                display: block;
+            }
+
+            .project-caption span {
+                display: block;
+                margin-top: 8px;
+            }
+
+            .cta {
+                padding: 90px 5%;
+            }
+
+            .footer-content {
+                display: block;
+            }
+
+            .footer-text {
+                margin-top: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+            LUXURY
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-number">
+                01 — Architecture
+            </div>
+
+            <h1>
+                Architecture
+            </h1>
+
+            <p>
+                We create thoughtful architectural spaces that balance
+                function, character and contemporary design — from the
+                first concept through to completion.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRODUCTION
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="intro">
+
+            <div>
+
+                <div class="section-number">
+                    01 — Our Approach
+                </div>
+
+            </div>
+
+
+            <div class="intro-text">
+
+                <h2>
+                    Spaces designed
+                    with purpose.
+                </h2>
+
+                <p>
+                    Our architectural approach begins with understanding
+                    the people, site and purpose behind every project.
+                    We develop designs that respond naturally to their
+                    surroundings while maintaining a strong architectural
+                    identity.
+                </p>
+
+                <p>
+                    From residential homes to larger architectural
+                    developments, every project is developed with
+                    attention to proportion, material, light, movement
+                    and long-term functionality.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         WHAT WE PROVIDE
+    ========================================= -->
+
+    <section class="section expertise">
+
+        <div class="expertise-header">
+
+            <div class="section-number">
+                02 — Expertise
+            </div>
+
+            <h2>
+                What We Do
+            </h2>
+
+        </div>
+
+
+        <div class="expertise-grid">
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    01
+                </div>
+
+                <h3>
+                    Concept Design
+                </h3>
+
+                <p>
+                    Developing the initial architectural vision,
+                    spatial concepts and design direction for your project.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    02
+                </div>
+
+                <h3>
+                    Planning & Development
+                </h3>
+
+                <p>
+                    Creating practical layouts and developing the design
+                    around site conditions, requirements and functionality.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    03
+                </div>
+
+                <h3>
+                    Architectural Design
+                </h3>
+
+                <p>
+                    Detailed architectural development including elevations,
+                    materials, proportions and overall architectural identity.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    04
+                </div>
+
+                <h3>
+                    3D Visualization
+                </h3>
+
+                <p>
+                    High-quality architectural visualization that allows
+                    you to experience the design before construction.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    05
+                </div>
+
+                <h3>
+                    Technical Documentation
+                </h3>
+
+                <p>
+                    Detailed drawings and documentation developed to
+                    communicate the architectural design clearly.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-item">
+
+                <div class="expertise-number">
+                    06
+                </div>
+
+                <h3>
+                    Design Development
+                </h3>
+
+                <p>
+                    Refining materials, details and architectural elements
+                    to bring the initial concept into a complete design.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROCESS
+    ========================================= -->
+
+    <section class="section">
+
+        <div class="process-header">
+
+            <div class="section-number">
+                03 — Process
+            </div>
+
+            <h2>
+                From idea to reality.
+            </h2>
+
+        </div>
+
+
+        <div class="process">
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Consultation
+                </h3>
+
+                <p>
+                    We begin by understanding your requirements,
+                    lifestyle, budget, site and overall project goals.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Concept
+                </h3>
+
+                <p>
+                    Initial concepts are developed to establish the
+                    architectural direction, planning and spatial approach.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Design Development
+                </h3>
+
+                <p>
+                    The selected concept is refined through materials,
+                    elevations, details, interiors and architectural elements.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Documentation
+                </h3>
+
+                <p>
+                    Detailed architectural drawings and documentation
+                    are prepared for construction and coordination.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    05
+                </div>
+
+                <h3>
+                    Completion
+                </h3>
+
+                <p>
+                    The final design is brought together into a complete
+                    architectural solution ready for implementation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FEATURED PROJECT
+    ========================================= -->
+
+    <section class="project-feature">
+
+        <div class="project-image">
+
+            <img
+                src="image/photo-1600607688969-a5bfcd646154.avif"
+                alt="Modern architectural residence">
+
+        </div>
+
+
+        <div class="project-caption">
+
+            <h3>
+                Villa No. 01
+            </h3>
+
+            <span>
+                Residential Architecture
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================= -->
+
+    <section class="cta">
+
+        <div class="section-number">
+            Start Your Project
+        </div>
+
+        <h2>
+            Have a project
+            in mind?
+        </h2>
+
+        <p>
+            Let's discuss your requirements and explore how we can
+            transform your ideas into a thoughtful architectural space.
+        </p>
+
+        <a href="consultation.html" class="cta-button">
+            Book a Consultation →
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                LUXURY
+            </div>
+
+            <div class="footer-text">
+                © 2026 Luxury Architecture. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

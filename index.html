@@ -10,961 +10,2186 @@
           content="LUXE Architecture — Contemporary architecture, luxury residences and timeless spaces.">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b0b0b;
-            color: #f4f0e8;
-            line-height: 1.6;
-        }
+                html {
+                    scroll-behavior: smooth;
+                }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background: #0b0b0b;
+                    color: #f4f0e8;
+                    line-height: 1.6;
+                }
 
-        /* =========================
-           NAVIGATION
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                /* =========================
+                NAVIGATION
+                ========================= */
+
+                header {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    padding: 24px 6%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(0,0,0,0.75),
+                        transparent
+                    );
+                }
+
+                .logo {
+                    font-size: 24px;
+                    letter-spacing: 7px;
+                    font-weight: 600;
+                }
+
+                .logo span {
+                    color: #c7a96b;
+                }
+
+                nav {
+                    display: flex;
+                    gap: 38px;
+                }
+
+                nav a {
+                    font-size: 13px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #ddd;
+                    transition: 0.3s;
+                }
+
+                nav a:hover {
+                    color: #c7a96b;
+                }
+
+                /* =========================
+                HERO
+                ========================= */
+
+                    .hero {
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    overflow: hidden;
+
+                    background:
+                        linear-gradient(
+                            90deg,
+                            rgba(0, 0, 0, 0.88),
+                            rgba(0, 0, 0, 0.42),
+                            rgba(0, 0, 0, 0.70)
+                        ),
+                        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90")
+                        center center / cover no-repeat;
+                }
+
+                .hero h1 {
+                    margin: 0;
+                    max-width: 950px;
+
+                    font-size: clamp(58px, 8.5vw, 125px);
+                    line-height: 0.88;
+                    font-weight: 300;
+
+                    letter-spacing: -4px;
+                    text-transform: uppercase;
+                }
+
+                .hero h1 strong {
+                    display: block;
+
+                    font-weight: 700;
+                    color: #c7a96b;
+
+                    letter-spacing: -5px;
+                }
+
+                .hero-description {
+                    max-width: 560px;
+                    margin-top: 32px;
+
+                    color: rgba(255, 255, 255, 0.78);
+
+                    font-size: 16px;
+                    line-height: 1.8;
+                    font-weight: 300;
+                    letter-spacing: 0.3px;
+                }
+
+                .hero-buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+
+                    margin-top: 42px;
+
+                    flex-wrap: wrap;
+                }
+
+                .btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    min-height: 52px;
+                    padding: 0 30px;
+
+                    border: 1px solid #c7a96b;
+
+                    color: #ffffff;
+                    background: transparent;
+
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 11px;
+                    font-weight: 500;
+
+                    text-decoration: none;
+
+                    transition:
+                        background 0.35s ease,
+                        color 0.35s ease,
+                        border-color 0.35s ease,
+                        transform 0.35s ease;
+                }
+
+                .btn:hover {
+                    background: #c7a96b;
+                    color: #111111;
+                    transform: translateY(-2px);
+                }
+                .btn.primary {
+                    background: #c7a96b;
+                    color: #0b0b0b;
+                }
+
+                .btn:hover {
+                    background: transparent;
+                    color: #c7a96b;
+                }
+
+                .scroll {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 6%;
+                    font-size: 10px;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    color: #aaa;
+                }
+
+                /* =========================
+                INTRO
+                ========================= */
+
+                section {
+                    padding: 130px 6%;
+                }
+
+                .intro {
+                    max-width: 1400px;
+                    margin: 0 auto;
+
+                    display: grid;
+                    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+                    gap: 100px;
+                    align-items: start;
+                }
+
+                .section-number {
+                    margin-bottom: 24px;
+
+                    color: #c7a96b;
+
+                    font-size: 10px;
+                    font-weight: 500;
+                    letter-spacing: 3.5px;
+                    text-transform: uppercase;
+                }
+
+                .intro h2 {
+                    max-width: 600px;
+                    margin: 0;
+
+                    font-size: clamp(46px, 5.5vw, 78px);
+                    line-height: 0.98;
+                    font-weight: 300;
+                    letter-spacing: -2.5px;
+                }
+
+                .intro h2 span {
+                    color: #c7a96b;
+                }
+
+                .intro-text {
+                    max-width: 620px;
+
+                    color: rgba(255, 255, 255, 0.68);
+
+                    font-size: 16px;
+                    line-height: 1.85;
+                    font-weight: 300;
+                }
+
+                .intro-text p {
+                    margin: 0;
+                }
+
+                .intro-text p + p {
+                    margin-top: 28px;
+                }
+                /* =========================
+                PROJECTS
+                ========================= */
+
+                .projects-section {
+                    background: #111111;
+                    padding: 120px 5%;
+                }
+
+                .section-heading {
+                    max-width: 1400px;
+                    margin: 0 auto 60px;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    gap: 60px;
+                }
+
+                .section-heading h2 {
+                    margin: 10px 0 0;
+
+                    font-size: clamp(48px, 6vw, 82px);
+                    font-weight: 300;
+                    line-height: 0.95;
+                    letter-spacing: -3px;
+                }
+
+                .section-heading p {
+                    max-width: 380px;
+                    margin: 0;
+
+                    color: #8d8d8d;
+
+                    font-size: 15px;
+                    line-height: 1.8;
+                    font-weight: 300;
+                }
+
+                .projects {
+                    max-width: 1400px;
+                    margin: 0 auto;
+
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    gap: 24px;
+                }
+
+                .project {
+                    position: relative;
+
+                    min-height: 560px;
+
+                    overflow: hidden;
+
+                    background: #1b1b1b;
+
+                    cursor: pointer;
+                }
+
+                .project.large {
+                    grid-row: span 2;
+                    min-height: 920px;
+                }
+
+                .project img {
+                    position: absolute;
+                    inset: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    object-fit: cover;
+
+                    transition:
+                        transform 0.9s cubic-bezier(0.2, 0.65, 0.25, 1),
+                        filter 0.6s ease;
+                }
+
+                .project:hover img {
+                    transform: scale(1.06);
+                    filter: brightness(0.88);
+                }
+
+                .project::after {
+                    content: "";
+
+                    position: absolute;
+                    inset: 0;
+
+                    background:
+                        linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.92) 0%,
+                            rgba(0, 0, 0, 0.35) 45%,
+                            rgba(0, 0, 0, 0) 75%
+                        );
+
+                    pointer-events: none;
+                }
+
+                .project-info {
+                    position: absolute;
+                    z-index: 2;
+
+                    left: 38px;
+                    right: 38px;
+                    bottom: 38px;
+                }
+
+                .project-info small {
+                    display: block;
+
+                    color: #c7a96b;
+
+                    font-size: 10px;
+                    font-weight: 500;
+
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
+
+                .project-info h3 {
+                    margin: 10px 0 0;
+
+                    color: #ffffff;
+
+                    font-size: clamp(28px, 3vw, 42px);
+                    font-weight: 300;
+
+                    line-height: 1.1;
+                    letter-spacing: -1px;
+                }
+
+                /* =========================
+                SERVICES
+                ========================= */
+
+                .services {
+                    max-width: 1400px;
+                    margin: auto;
+                }
+                .services-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+                    margin-top: 60px;
+
+                    border-top: 1px solid rgba(255, 255, 255, 0.12);
+                }
+
+                .service {
+                    position: relative;
+
+                    min-height: 270px;
+                    padding: 48px 38px;
+
+                    border-right: 1px solid rgba(255, 255, 255, 0.12);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+                    background: transparent;
+
+                    transition:
+                        background 0.4s ease,
+                        transform 0.4s ease;
+                }
+
+                .service:nth-child(3n) {
+                    border-right: none;
+                }
+
+                .service:hover {
+                    background: #171717;
+                    transform: translateY(-4px);
+                }
+
+                .service-number {
+                    color: #c7a96b;
+
+                    font-size: 11px;
+                    font-weight: 500;
+
+                    letter-spacing: 3px;
+                }
+
+                .service h3 {
+                    margin: 30px 0 16px;
+
+                    color: #ffffff;
+
+                    font-size: 26px;
+                    line-height: 1.1;
+
+                    font-weight: 300;
+                    letter-spacing: -0.5px;
+                }
+
+                .service p {
+                    max-width: 340px;
+                    margin: 0;
+
+                    color: rgba(255, 255, 255, 0.52);
+
+                    font-size: 14px;
+                    line-height: 1.8;
+                    font-weight: 300;
+                }
+
+                /* =========================
+                PHILOSOPHY
+                ========================= */
+
+                .philosophy {
+                    min-height: 700px;
+                    display: flex;
+                    align-items: center;
+                    background:
+                        linear-gradient(
+                            rgba(0,0,0,0.65),
+                            rgba(0,0,0,0.75)
+                        ),
+                        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90")
+                        center/cover no-repeat;
+                }
+
+                .philosophy-content {
+                    max-width: 1000px;
+                    margin: auto;
+                    text-align: center;
+                }
+
+                .philosophy h2 {
+                    font-size: clamp(45px, 7vw, 95px);
+                    line-height: 0.95;
+                    font-weight: 300;
+                }
+
+                .philosophy h2 span {
+                    color: #c7a96b;
+                }
+
+                .philosophy p {
+                    max-width: 650px;
+                    margin: 35px auto 0;
+                    color: #ccc;
+                    font-size: 17px;
+                }
+
+                /* =========================
+                CONTACT
+                ========================= */
+
+                .contact {
+                    max-width: 1400px;
+                    margin: 0 auto;
+
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+
+                    gap: 110px;
+                    align-items: center;
+                }
+
+                .contact h2 {
+                    margin: 0;
+
+                    max-width: 700px;
+
+                    color: #ffffff;
+
+                    font-size: clamp(52px, 7vw, 96px);
+                    line-height: 0.92;
+
+                    font-weight: 300;
+                    letter-spacing: -3px;
+                }
+
+                .contact h2 span {
+                    color: #c7a96b;
+                }
+
+                .contact-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    gap: 0;
+
+                    max-width: 500px;
+                }
+
+                .contact-item {
+                    padding: 24px 0;
+
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+                    transition:
+                        padding-left 0.35s ease,
+                        border-color 0.35s ease;
+                }
+
+                .contact-item:first-child {
+                    padding-top: 0;
+                }
+
+                .contact-item:hover {
+                    padding-left: 8px;
+                    border-color: #c7a96b;
+                }
+
+                .contact-item small {
+                    display: block;
+
+                    margin-bottom: 10px;
+
+                    color: #c7a96b;
+
+                    font-size: 10px;
+                    font-weight: 500;
+
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
+
+                .contact-item a,
+                .contact-item p {
+                    margin: 0;
+
+                    color: rgba(255, 255, 255, 0.72);
+
+                    font-size: 17px;
+                    line-height: 1.6;
+                    font-weight: 300;
+
+                    text-decoration: none;
+
+                    transition: color 0.3s ease;
+                }
+
+                .contact-item a:hover {
+                    color: #ffffff;
+                }
+
+                /* =========================
+                FOOTER
+                ========================= */
+
+                footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    gap: 30px;
+
+                    padding: 35px 6%;
+
+                    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+                    color: #666666;
+
+                    font-size: 11px;
+                    font-weight: 300;
+
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                }
+
+                .footer-brand {
+                    color: #c7a96b;
+
+                    font-size: 12px;
+                    font-weight: 500;
+
+                    letter-spacing: 2px;
+                }
+
+                .footer-copy,
+                .footer-tagline {
+                    color: #666666;
+                }
+
+                /* =========================
+                RESPONSIVE
+                ========================= */
+
+            /* =========================
+        MOBILE MENU
         ========================= */
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 24px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(
-                to bottom,
-                rgba(0,0,0,0.75),
-                transparent
-            );
-        }
-
-        .logo {
-            font-size: 24px;
-            letter-spacing: 7px;
-            font-weight: 600;
-        }
-
-        .logo span {
-            color: #c7a96b;
-        }
-
-        nav {
-            display: flex;
-            gap: 38px;
-        }
-
-        nav a {
-            font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #ddd;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #c7a96b;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,0.85),
-                    rgba(0,0,0,0.35),
-                    rgba(0,0,0,0.65)
-                ),
-                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90")
-                center/cover no-repeat;
-        }
-
-        .hero-content {
-            width: 90%;
-            max-width: 1250px;
-            margin: auto;
-            padding-top: 80px;
-        }
-
-        .eyebrow {
-            color: #c7a96b;
-            letter-spacing: 5px;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(55px, 9vw, 125px);
-            line-height: 0.9;
-            font-weight: 300;
-            letter-spacing: -5px;
-            max-width: 900px;
-        }
-
-        .hero h1 strong {
-            font-weight: 700;
-            display: block;
-        }
-
-        .hero-description {
-            max-width: 530px;
-            margin-top: 35px;
-            color: #d0d0d0;
-            font-size: 17px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            border: 1px solid #c7a96b;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 11px;
-            transition: 0.35s;
-        }
-
-        .btn.primary {
-            background: #c7a96b;
-            color: #0b0b0b;
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: #c7a96b;
-        }
-
-        .scroll {
-            position: absolute;
-            bottom: 30px;
-            left: 6%;
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #aaa;
-        }
-
-        /* =========================
-           INTRO
-        ========================= */
-
-        section {
-            padding: 120px 6%;
-        }
-
-        .intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 90px;
-            max-width: 1400px;
-            margin: auto;
-        }
-
-        .section-number {
-            color: #c7a96b;
-            font-size: 12px;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
-
-        .intro h2 {
-            font-size: clamp(40px, 5vw, 70px);
-            line-height: 1;
-            font-weight: 300;
-        }
-
-        .intro h2 span {
-            color: #c7a96b;
-        }
-
-        .intro-text {
-            color: #aaa;
-            font-size: 17px;
-            max-width: 600px;
-        }
-
-        .intro-text p + p {
-            margin-top: 25px;
-        }
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .projects-section {
-            background: #111;
-        }
-
-        .section-heading {
-            max-width: 1400px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            margin-bottom: 55px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(45px, 6vw, 80px);
-            font-weight: 300;
-            line-height: 1;
-        }
-
-        .section-heading p {
-            color: #888;
-            max-width: 350px;
-        }
-
-        .projects {
-            max-width: 1400px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project {
-            position: relative;
-            min-height: 550px;
-            overflow: hidden;
-            background: #222;
-        }
-
-        .project.large {
-            grid-row: span 2;
-            min-height: 900px;
-        }
-
-        .project img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            inset: 0;
-            transition: transform 0.8s ease;
-        }
-
-        .project:hover img {
-            transform: scale(1.07);
-        }
-
-        .project::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(0,0,0,0.9),
-                transparent 65%
-            );
-        }
-
-        .project-info {
-            position: absolute;
-            z-index: 2;
-            bottom: 35px;
-            left: 35px;
-            right: 35px;
-        }
-
-        .project-info small {
-            color: #c7a96b;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .project-info h3 {
-            font-size: 35px;
-            font-weight: 300;
-            margin-top: 8px;
-        }
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .services {
-            max-width: 1400px;
-            margin: auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-top: 1px solid #333;
-            margin-top: 60px;
-        }
-
-        .service {
-            padding: 45px 35px;
-            border-bottom: 1px solid #333;
-            border-right: 1px solid #333;
-            transition: 0.3s;
-        }
-
-        .service:nth-child(3n) {
-            border-right: none;
-        }
-
-        .service:hover {
-            background: #141414;
-        }
-
-        .service-number {
-            color: #c7a96b;
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
-
-        .service h3 {
-            font-size: 25px;
-            font-weight: 400;
-            margin: 25px 0 15px;
-        }
-
-        .service p {
-            color: #888;
-            font-size: 14px;
-        }
-
-        /* =========================
-           PHILOSOPHY
-        ========================= */
-
-        .philosophy {
-            min-height: 700px;
-            display: flex;
-            align-items: center;
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.65),
-                    rgba(0,0,0,0.75)
-                ),
-                url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90")
-                center/cover no-repeat;
-        }
-
-        .philosophy-content {
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .philosophy h2 {
-            font-size: clamp(45px, 7vw, 95px);
-            line-height: 0.95;
-            font-weight: 300;
-        }
-
-        .philosophy h2 span {
-            color: #c7a96b;
-        }
-
-        .philosophy p {
-            max-width: 650px;
-            margin: 35px auto 0;
-            color: #ccc;
-            font-size: 17px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            max-width: 1400px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-        }
-
-        .contact h2 {
-            font-size: clamp(50px, 7vw, 90px);
-            font-weight: 300;
-            line-height: 0.95;
-        }
-
-        .contact h2 span {
-            color: #c7a96b;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .contact-item {
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-        }
-
-        .contact-item small {
-            display: block;
-            color: #c7a96b;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .contact-item a,
-        .contact-item p {
-            color: #ccc;
-            font-size: 18px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            border-top: 1px solid #222;
-            padding: 35px 6%;
-            display: flex;
-            justify-content: space-between;
-            color: #666;
-            font-size: 12px;
-            letter-spacing: 1px;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            nav {
+            .mobile-menu-button {
                 display: none;
+
+                color: #ffffff;
+                font-size: 26px;
+                line-height: 1;
+
+                cursor: pointer;
+
+                z-index: 1001;
+
+                user-select: none;
             }
 
-            .intro,
-            .contact {
-                grid-template-columns: 1fr;
-                gap: 45px;
+
+            /* =========================
+            TABLET / MOBILE
+            ========================= */
+
+            @media (max-width: 900px) {
+
+                /* Mobile menu button */
+
+                .mobile-menu-button {
+                    display: block;
+                }
+
+
+                /* Mobile navigation */
+
+                nav {
+                    position: fixed;
+
+                    top: 0;
+                    right: -100%;
+
+                    width: 280px;
+                    height: 100vh;
+
+                    padding: 110px 35px 40px;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    gap: 25px;
+
+                    background: #111111;
+
+                    border-left: 1px solid rgba(255, 255, 255, 0.10);
+
+                    transition: right 0.4s ease;
+
+                    z-index: 1000;
+                }
+
+
+                nav.active {
+                    right: 0;
+                }
+
+
+                nav a {
+                    color: #ffffff;
+
+                    font-size: 18px;
+                    font-weight: 300;
+
+                    letter-spacing: 1px;
+
+                    text-decoration: none;
+
+                    transition: color 0.3s ease;
+                }
+
+
+                nav a:hover {
+                    color: #c7a96b;
+                }
+
+
+                /* Hero */
+
+                .hero-content {
+                    width: 88%;
+                    padding-top: 60px;
+                }
+
+                .hero h1 {
+                    font-size: clamp(52px, 12vw, 90px);
+                    letter-spacing: -3px;
+                }
+
+                .hero-description {
+                    max-width: 520px;
+                }
+
+
+                /* About */
+
+                .intro,
+                .contact {
+                    grid-template-columns: 1fr;
+                    gap: 55px;
+                }
+
+
+                /* Projects */
+
+                .projects {
+                    grid-template-columns: 1fr;
+                }
+
+                .project {
+                    min-height: 600px;
+                }
+
+                .project.large {
+                    grid-row: auto;
+                    min-height: 650px;
+                }
+
+
+                /* Services */
+
+                .services-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .service:nth-child(3n) {
+                    border-right: 1px solid rgba(255, 255, 255, 0.12);
+                }
+
+                .service:nth-child(2n) {
+                    border-right: none;
+                }
+
+
+                /* Section heading */
+
+                .section-heading {
+                    display: block;
+                }
+
+                .section-heading p {
+                    margin-top: 25px;
+                }
+
+
+                /* Contact */
+
+                .contact-details {
+                    max-width: 600px;
+                }
+
+
+                /* Footer */
+
+                footer {
+                    flex-wrap: wrap;
+                }
             }
 
-            .projects {
-                grid-template-columns: 1fr;
+
+            /* =========================
+            PHONE
+            ========================= */
+
+            @media (max-width: 600px) {
+
+                section {
+                    padding: 85px 6%;
+                }
+
+
+                /* Hero */
+
+                .hero {
+                    min-height: 100svh;
+                }
+
+                .hero-content {
+                    width: 88%;
+                    padding-top: 40px;
+                }
+
+                .eyebrow {
+                    font-size: 9px;
+                    letter-spacing: 3px;
+                    margin-bottom: 20px;
+                }
+
+                .hero h1 {
+                    font-size: clamp(48px, 15vw, 72px);
+                    line-height: 0.92;
+                    letter-spacing: -2px;
+                }
+
+                .hero h1 strong {
+                    letter-spacing: -3px;
+                }
+
+                .hero-description {
+                    max-width: 100%;
+                    margin-top: 28px;
+
+                    font-size: 14px;
+                    line-height: 1.75;
+                }
+
+
+                /* Buttons */
+
+                .hero-buttons {
+                    align-items: stretch;
+                    flex-direction: column;
+
+                    gap: 12px;
+                    margin-top: 32px;
+                }
+
+                .btn {
+                    width: 100%;
+                    min-height: 50px;
+                    padding: 0 20px;
+                }
+
+                .scroll {
+                    display: none;
+                }
+
+
+                /* Section numbers */
+
+                .section-number {
+                    font-size: 9px;
+                    letter-spacing: 2.5px;
+                }
+
+
+                /* About */
+
+                .intro h2 {
+                    font-size: clamp(42px, 13vw, 62px);
+                    letter-spacing: -2px;
+                }
+
+                .intro-text {
+                    font-size: 15px;
+                    line-height: 1.8;
+                }
+
+
+                /* Projects */
+
+                .projects-section {
+                    padding-left: 6%;
+                    padding-right: 6%;
+                }
+
+                .section-heading h2 {
+                    font-size: clamp(44px, 13vw, 65px);
+                    letter-spacing: -2px;
+                }
+
+                .project {
+                    min-height: 450px;
+                }
+
+                .project.large {
+                    min-height: 500px;
+                }
+
+                .project-info {
+                    left: 25px;
+                    right: 25px;
+                    bottom: 25px;
+                }
+
+                .project-info h3 {
+                    font-size: 30px;
+                }
+
+
+                /* Services */
+
+                .services-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .service,
+                .service:nth-child(2n),
+                .service:nth-child(3n) {
+                    min-height: auto;
+
+                    padding: 40px 25px;
+
+                    border-right: none;
+                }
+
+                .service h3 {
+                    margin-top: 22px;
+                    font-size: 24px;
+                }
+
+                .service p {
+                    font-size: 14px;
+                    line-height: 1.75;
+                }
+
+
+                /* Contact */
+
+                .contact h2 {
+                    font-size: clamp(48px, 14vw, 70px);
+                    letter-spacing: -2px;
+                }
+
+                .contact-details {
+                    width: 100%;
+                }
+
+                .contact-item {
+                    padding: 20px 0;
+                }
+
+                .contact-item a,
+                .contact-item p {
+                    font-size: 15px;
+                }
+
+
+                /* Footer */
+
+                footer {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    gap: 12px;
+
+                    padding: 30px 6%;
+                }
+
+                .footer-brand,
+                .footer-copy,
+                .footer-tagline {
+                    font-size: 9px;
+                }
+
             }
 
-            .project.large {
-                grid-row: auto;
-                min-height: 600px;
+                /* =========================
+        PROJECT MODAL
+        ========================= */
+
+            .project-modal {
+                position: fixed;
+
+                inset: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 30px;
+
+                background: rgba(0, 0, 0, 0.88);
+
+                opacity: 0;
+                visibility: hidden;
+
+                transition:
+                    opacity 0.35s ease,
+                    visibility 0.35s ease;
+
+                z-index: 2000;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
+            .project-modal.active {
+                opacity: 1;
+                visibility: visible;
             }
 
-            .service {
-                border-right: none;
+            .project-modal-content {
+                position: relative;
+
+                width: min(1000px, 100%);
+
+                max-height: 90vh;
+
+                overflow: auto;
+
+                background: #111111;
+
+                border: 1px solid rgba(255, 255, 255, 0.10);
+
+                transform: translateY(30px);
+
+                transition: transform 0.4s ease;
             }
 
-            .section-heading {
+            .project-modal.active .project-modal-content {
+                transform: translateY(0);
+            }
+
+            .project-modal-content img {
                 display: block;
+
+                width: 100%;
+
+                max-height: 560px;
+
+                object-fit: cover;
             }
 
-            .section-heading p {
-                margin-top: 25px;
+            .project-modal-close {
+                position: absolute;
+
+                top: 20px;
+                right: 20px;
+
+                width: 45px;
+                height: 45px;
+
+                border: 1px solid rgba(255, 255, 255, 0.25);
+
+                background: rgba(0, 0, 0, 0.65);
+
+                color: #ffffff;
+
+                font-size: 24px;
+                font-weight: 300;
+
+                cursor: pointer;
+
+                z-index: 5;
+
+                transition:
+                    background 0.3s ease,
+                    color 0.3s ease;
             }
-        }
 
-        @media (max-width: 600px) {
-
-            section {
-                padding: 80px 6%;
+            .project-modal-close:hover {
+                background: #c7a96b;
+                color: #111111;
             }
 
-            .hero h1 {
+            .modal-info {
+                padding: 45px;
+            }
+
+            .modal-info h2 {
+                margin: 10px 0 20px;
+
+                font-size: clamp(40px, 5vw, 65px);
+
+                font-weight: 300;
+
                 letter-spacing: -2px;
             }
 
-            .hero-description {
-                font-size: 15px;
+            .modal-info p {
+                max-width: 650px;
+
+                color: rgba(255, 255, 255, 0.65);
+
+                font-size: 16px;
+
+                line-height: 1.8;
+
+                font-weight: 300;
             }
 
-            .project {
-                min-height: 450px;
-            }
+                /* =========================================
+        PROJECT POPUP
+        ========================================= */
 
-            footer {
-                flex-direction: column;
-                gap: 10px;
-            }
+        .project-modal {
+            position: fixed;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.78);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            z-index: 9999;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity 0.3s ease,
+                        visibility 0.3s ease;
         }
+
+
+        /* SHOW POPUP */
+
+        .project-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        /* =========================================
+        MODAL BOX
+        ========================================= */
+
+        .modal-box {
+            position: relative;
+
+            width: min(1000px, 95vw);
+            max-height: 90vh;
+
+            background: #ffffff;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+
+            transform: translateY(30px) scale(0.97);
+
+            transition: transform 0.35s ease;
+        }
+
+
+        .project-modal.show .modal-box {
+            transform: translateY(0) scale(1);
+        }
+
+
+        /* =========================================
+        MODAL IMAGE
+        ========================================= */
+
+        .modal-image {
+            width: 100%;
+            height: 100%;
+
+            min-height: 550px;
+
+            overflow: hidden;
+        }
+
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 0.6s ease;
+        }
+
+
+        .modal-box:hover .modal-image img {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================================
+        MODAL INFORMATION
+        ========================================= */
+
+        .modal-info {
+            padding: 55px 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .section-number {
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #888;
+
+            margin-bottom: 18px;
+        }
+
+
+        .modal-info h2 {
+            margin: 0 0 20px;
+
+            font-size: 38px;
+
+            line-height: 1.1;
+
+            font-weight: 500;
+
+            color: #111;
+        }
+
+
+        .modal-info p {
+            margin: 0;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            color: #666;
+        }
+
+
+        /* =========================================
+        PROJECT DETAILS
+        ========================================= */
+
+        .modal-meta {
+            margin-top: 40px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #e5e5e5;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+
+        .modal-meta div {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+
+        .modal-meta span {
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #999;
+        }
+
+
+        .modal-meta strong {
+            font-size: 14px;
+
+            font-weight: 500;
+
+            color: #222;
+        }
+
+
+        /* =========================================
+        CLOSE BUTTON
+        ========================================= */
+
+        .modal-close {
+            position: absolute;
+
+            top: 18px;
+            right: 18px;
+
+            width: 42px;
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(0, 0, 0, 0.65);
+
+            color: #fff;
+
+            font-size: 26px;
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            z-index: 10;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: background 0.2s ease,
+                        transform 0.2s ease;
+        }
+
+
+        .modal-close:hover {
+            background: #000;
+
+            transform: rotate(90deg);
+        }
+
+
+        /* =========================================
+        MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .project-modal {
+                padding: 20px;
+            }
+
+            .modal-box {
+                width: 100%;
+
+                max-height: 90vh;
+
+                display: flex;
+
+                flex-direction: column;
+
+                overflow-y: auto;
+            }
+
+
+            .modal-image {
+                height: 280px;
+
+                min-height: 280px;
+
+                flex-shrink: 0;
+            }
+
+
+            .modal-info {
+                padding: 35px 28px;
+            }
+
+
+            .modal-info h2 {
+                font-size: 30px;
+            }
+
+
+            .modal-meta {
+                margin-top: 30px;
+            }
+
+        }
+
+            /* =========================================
+        SERVICE
+        ========================================= */
+
+                .services-grid .service {
+                color: inherit;
+                text-decoration: none;
+            }
+
     </style>
+
 </head>
 
-<body>
+    <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+        <!-- =========================
+            NAVIGATION
+        ========================== -->
 
-    <header>
-        <a href="#" class="logo">
-            LUXE<span>.</span>
-        </a>
+        <header>
+            <a href="index.html" class="logo">
+                LUXE<span>.</span>
+            </a>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <div class="eyebrow">
-                    Architecture · Interiors · Design
-                </div>
-
-                <h1>
-                    Spaces
-                    <strong>Beyond</strong>
-                </h1>
-
-                <p class="hero-description">
-                    We create extraordinary architectural environments
-                    where refined materials, timeless design and modern
-                    living come together.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn primary">
-                        Explore Projects
-                    </a>
-
-                    <a href="#contact" class="btn">
-                        Start a Project
-                    </a>
-                </div>
-
+            <div class="mobile-menu-button" onclick="toggleMobileMenu()">
+                ☰
             </div>
 
-            <div class="scroll">
-                ↓ Scroll to explore
-            </div>
+            <nav id="mainNav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        </section>
+        </header>
 
 
         <!-- =========================
-             ABOUT
+            HERO
         ========================== -->
 
-        <section id="about">
+        <main>
 
-            <div class="intro">
+            <section class="hero">
 
-                <div>
-                    <div class="section-number">
-                        01 — Philosophy
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        Architecture · Interior Design · 3D Visualization
                     </div>
 
-                    <h2>
-                        Architecture<br>
-                        with <span>purpose.</span>
-                    </h2>
-                </div>
+                    <h1>
+                        Spaces
+                        <strong>Beyond</strong>
+                    </h1>
 
-                <div class="intro-text">
-
-                    <p>
-                        LUXE is an architecture and design studio focused
-                        on creating distinctive spaces for contemporary
-                        living.
+                    <p class="hero-description">
+                        We design refined architectural spaces where
+                        timeless materials, modern living and thoughtful
+                        design come together.
                     </p>
 
-                    <p>
-                        From private residences to hospitality environments,
-                        every project is carefully considered — from its
-                        relationship with light and landscape to the smallest
-                        material detail.
-                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary">
+                            Explore Projects
+                        </a>
 
-                    <p>
-                        Our approach is simple: create less ordinary,
-                        more meaningful architecture.
-                    </p>
+                        <a href="#contact" class="btn">
+                            Start a Project
+                        </a>
+                    </div>
 
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PROJECTS
-        ========================== -->
-
-        <section id="projects" class="projects-section">
-
-            <div class="section-heading">
-
-                <div>
-                    <div class="section-number">
-                        02 — Selected Work
-                    </div>
-
-                    <h2>Projects</h2>
+                <div class="scroll">
+                    ↓ Scroll to explore
                 </div>
 
-                <p>
-                    A selection of spaces designed around atmosphere,
-                    proportion, material and experience.
-                </p>
-
-            </div>
+            </section>
 
 
-            <div class="projects">
+            <!-- =========================
+                ABOUT
+            ========================== -->
 
-                <article class="project large">
+            <section id="about">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"
-                        alt="Modern luxury residence">
+                <div class="intro">
 
-                    <div class="project-info">
+                    <div>
+                        <div class="section-number">
+                            01 — Philosophy
+                        </div>
 
-                        <small>Residential</small>
+                        <h2>
+                            Architecture<br>
+                            with <span>purpose.</span>
+                        </h2>
+                    </div>
 
-                        <h3>
-                            Villa No. 01
-                        </h3>
+                    <div class="intro-text">
+                        <p>
+                            LUXE is an architecture and interior design studio creating
+                            refined spaces shaped by clarity, proportion and timeless
+                            materiality.
+                        </p>
+
+                        <p>
+                            From contemporary residences and private villas to hospitality
+                            and commercial environments, every project is carefully considered
+                            from its context and purpose to the smallest material detail.
+                        </p>
+
+                        <p>
+                            Our philosophy is simple: thoughtful design, exceptional detailing
+                            and architecture that remains meaningful for years to come.
+                        </p>
 
                     </div>
 
-                </article>
-
-
-                <article class="project">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=90"
-                        alt="Luxury interior">
-
-                    <div class="project-info">
-
-                        <small>Interior</small>
-
-                        <h3>
-                            The Atrium
-                        </h3>
-
-                    </div>
-
-                </article>
-
-
-                <article class="project">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90"
-                        alt="Contemporary architecture">
-
-                    <div class="project-info">
-
-                        <small>Architecture</small>
-
-                        <h3>
-                            Casa Horizon
-                        </h3>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SERVICES
-        ========================== -->
-
-        <section id="services">
-
-            <div class="services">
-
-                <div class="section-number">
-                    03 — What We Do
                 </div>
+
+            </section>
+
+
+            <!-- =========================
+                PROJECTS
+            ========================== -->
+
+            <section id="projects" class="projects-section">
 
                 <div class="section-heading">
-                    <h2>Our Expertise</h2>
+
+                    <div>
+                        <div class="section-number">
+                            02 — Selected Work
+                        </div>
+
+                        <h2>Projects</h2>
+                    </div>
+
+                    <p>
+                        A selection of spaces designed around atmosphere,
+                        proportion, material and experience.
+                    </p>
+
                 </div>
 
 
-                <div class="services-grid">
+                <div class="projects">
 
-                    <div class="service">
+        <!-- PROJECT 01 -->
 
-                        <div class="service-number">
-                            01
-                        </div>
+            <article
 
-                        <h3>
-                            Architecture
-                        </h3>
+                class="project large"
+                onclick="openProject('villa')">
 
-                        <p>
-                            Concept development, architectural design,
-                            planning and detailed project development.
-                        </p>
+                <img
+                    src="image/photo-1600607688969-a5bfcd646154.avif"
+                    alt="Modern luxury residence">
 
-                    </div>
+                <div class="project-info">
 
+                    <small>Residential</small>
 
-                    <div class="service">
+                    <h3>
+                        Villa No. 01
+                    </h3>
 
-                        <div class="service-number">
-                            02
-                        </div>
-
-                        <h3>
-                            Interior Design
-                        </h3>
-
-                        <p>
-                            Refined interiors built around material,
-                            atmosphere, functionality and timeless style.
-                        </p>
-
-                    </div>
-
-
-                    <div class="service">
-
-                        <div class="service-number">
-                            03
-                        </div>
-
-                        <h3>
-                            Landscape
-                        </h3>
-
-                        <p>
-                            Thoughtful outdoor environments that connect
-                            architecture with its surrounding landscape.
-                        </p>
-
-                    </div>
-
-
-                    <div class="service">
-
-                        <div class="service-number">
-                            04
-                        </div>
-
-                        <h3>
-                            Visualization
-                        </h3>
-
-                        <p>
-                            High-quality architectural visualization that
-                            communicates the vision before construction.
-                        </p>
-
-                    </div>
-
-
-                    <div class="service">
-
-                        <div class="service-number">
-                            05
-                        </div>
-
-                        <h3>
-                            Renovation
-                        </h3>
-
-                        <p>
-                            Transforming existing spaces into contemporary
-                            environments without losing their character.
-                        </p>
-
-                    </div>
-
-
-                    <div class="service">
-
-                        <div class="service-number">
-                            06
-                        </div>
-
-                        <h3>
-                            Consultation
-                        </h3>
-
-                        <p>
-                            Strategic architectural and design guidance
-                            from the first idea through completion.
-                        </p>
-
-                    </div>
+                    <span class="project-view">
+                        View Project →
+                    </span>
 
                 </div>
 
-            </div>
-
-        </section>
+            </article>
 
 
-        <!-- =========================
-             PHILOSOPHY
-        ========================== -->
+            <!-- PROJECT 02 -->
 
-        <section class="philosophy">
+            <article
 
-            <div class="philosophy-content">
+                class="project"
+                onclick="openProject('atrium')">
 
-                <div class="section-number">
-                    04 — Our Belief
+                <img
+                    src="image/photo-1600607687920-4e2a09cf159d.avif"
+                    alt="Luxury interior">
+
+                <div class="project-info">
+
+                    <small>Interior</small>
+
+                    <h3>
+                        The Atrium
+                    </h3>
+
+                    <span class="project-view">
+                        View Project →
+                    </span>
+
                 </div>
 
-                <h2>
-                    Design is not<br>
-                    what you <span>add.</span>
-                </h2>
-
-                <p>
-                    It is what you carefully choose to leave behind:
-                    unnecessary detail, visual noise and everything that
-                    stands between people and the experience of a space.
-                </p>
-
-            </div>
-
-        </section>
+            </article>
 
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
+            <!-- PROJECT 03 -->
 
-        <section id="contact">
+            <article
+            
+                class="project"
+                onclick="openProject('casa')">
 
-            <div class="contact">
+                <img
+                    src="image/photo-1600607687939-ce8a6c25118c.avif"
+                    alt="Contemporary architecture">
 
-                <div>
+                <div class="project-info">
+
+                    <small>Architecture</small>
+
+                    <h3>
+                        Casa Horizon
+                    </h3>
+
+                    <span class="project-view">
+                        View Project →
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+            </section>
+
+
+            <!-- =========================
+                SERVICES
+            ========================== -->
+
+            <section id="services">
+
+                <div class="services">
+
+                        <div class="section-number">
+                            03 — What We Do
+                        </div>
+
+                        <div class="section-heading">
+                            <h2>Our Expertise</h2>
+                        </div>
+
+
+                        <div class="services-grid">
+
+                            <!-- 01 — ARCHITECTURE -->
+                            <a href="architecture.html" class="service">
+
+                                <div class="service-number">
+                                    01
+                                </div>
+
+                                <h3>
+                                    Architecture
+                                </h3>
+
+                                <p>
+                                    From concept development and planning to detailed architectural
+                                    design, we create spaces with clarity, function and character.
+                                </p>
+
+                            </a>
+
+
+                            <!-- 02 — INTERIOR DESIGN -->
+                            <a href="interior-design.html" class="service">
+
+                                <div class="service-number">
+                                    02
+                                </div>
+
+                                <h3>
+                                    Interior Design
+                                </h3>
+
+                                <p>
+                                    Refined interiors shaped by material, atmosphere, proportion,
+                                    functionality and timeless design.
+                                </p>
+
+                            </a>
+
+
+                            <!-- 03 — LANDSCAPE DESIGN -->
+                            <a href="landscape-design.html" class="service">
+
+                                <div class="service-number">
+                                    03
+                                </div>
+
+                                <h3>
+                                    Landscape
+                                </h3>
+
+                                <p>
+                                    Thoughtful outdoor environments that connect architecture,
+                                    landscape and the natural surroundings.
+                                </p>
+
+                            </a>
+
+
+                            <!-- 04 — 3D VISUALIZATION -->
+                            <a href="3d-visualization.html" class="service">
+
+                                <div class="service-number">
+                                    04
+                                </div>
+
+                                <h3>
+                                    Visualization
+                                </h3>
+
+                                <p>
+                                    Photorealistic architectural visualization that communicates
+                                    design intent, materials and atmosphere before construction.
+                                </p>
+
+                            </a>
+
+
+                            <!-- 05 — RENOVATION -->
+                            <a href="renovation.html" class="service">
+
+                                <div class="service-number">
+                                    05
+                                </div>
+
+                                <h3>
+                                    Renovation
+                                </h3>
+
+                                <p>
+                                    Thoughtful transformation of existing spaces into contemporary
+                                    environments while respecting their original character.
+                                </p>
+
+                            </a>
+
+
+                        </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                PHILOSOPHY
+            ========================== -->
+
+            <section class="philosophy">
+
+                <div class="philosophy-content">
 
                     <div class="section-number">
-                        05 — Contact
+                        04 — Our Belief
                     </div>
 
                     <h2>
-                        Let's create<br>
-                        something <span>remarkable.</span>
+                        Design is not<br>
+                        what you <span>add.</span>
                     </h2>
+
+                    <p>
+                        It is what you carefully choose to leave behind:
+                        unnecessary detail, visual noise and everything that
+                        stands between people and the experience of a space.
+                    </p>
 
                 </div>
 
+            </section>
 
-                <div class="contact-details">
 
-                    <div class="contact-item">
+            <!-- =========================
+                CONTACT
+            ========================== -->
 
-                        <small>Email</small>
+            <section id="contact">
 
-                        <a href="mailto:hello@luxearchitecture.com">
-                            hello@luxearchitecture.com
-                        </a>
+                    <div class="contact">
+
+                        <div class="contact-intro">
+
+                            <div class="section-number">
+                                05 — Contact
+                            </div>
+
+                            <h2>
+                                Let's create<br>
+                                something <span>remarkable.</span>
+                            </h2>
+
+                        </div>
+
+                        <div class="contact-details">
+
+                            <div class="contact-item">
+
+                                <small>Email</small>
+
+                                <a href="mailto:hello@luxearchitecture.com">
+                                    hello@luxearchitecture.com
+                                </a>
+
+                            </div>
+
+                            <div class="contact-item">
+
+                                <small>Phone</small>
+
+                                <a href="tel:+923000000000">
+                                    +92 300 000 0000
+                                </a>
+
+                            </div>
+
+                            <div class="contact-item">
+
+                                <small>Studio</small>
+
+                                <p>
+                                    Islamabad · Pakistan
+                                </p>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
+            </section>
 
-                    <div class="contact-item">
+        </main>
 
-                        <small>Phone</small>
+        <!-- =========================
+        PROJECT MODAL
+    ========================= -->
 
-                        <a href="tel:+00000000000">
-                            +00 000 000 0000
-                        </a>
+            <div class="project-modal" id="projectModal">
 
-                    </div>
+                <div class="modal-box">
+
+                        <!-- CLOSE -->
+                        <button class="modal-close" onclick="closeProject()">×</button>
 
 
-                    <div class="contact-item">
+                        <!-- PROJECT IMAGE -->
+                        
+                        <div class="modal-image">
+                            <img
+                                id="modalImage"
+                                src="image/photo-1600607688969-a5bfcd646154.avif"
+                                alt="Villa No. 01">
+                        </div>
 
-                        <small>Studio</small>
 
-                        <p>
-                            Architecture & Design Studio
-                        </p>
+                        <!-- PROJECT CONTENT -->
 
-                    </div>
+                        <div class="modal-info">
+
+                            <!-- CATEGORY -->
+                            <div class="section-number" id="modalCategory">
+                                RESIDENTIAL
+                            </div>
+
+
+                            <!-- TITLE -->
+                            <h2 id="modalTitle">
+                                Villa No. 01
+                            </h2>
+
+
+                            <!-- DESCRIPTION -->
+
+                            <p id="modalDescription">
+                                A contemporary luxury residence designed with a strong
+                                connection between architecture, natural light and
+                                outdoor living. The project combines clean architectural
+                                lines, warm materials and carefully framed views to create
+                                a sophisticated yet comfortable family home.
+                            </p>
+
+
+                            <!-- PROJECT DETAILS -->
+
+                            <div class="project-details">
+
+                                    <div class="detail">
+                                        <span>LOCATION</span>
+                                        <strong id="modalLocation">
+                                            Islamabad, Pakistan
+                                        </strong>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span>YEAR</span>
+                                        <strong id="modalYear">
+                                            2026
+                                        </strong>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span>AREA</span>
+                                        <strong id="modalArea">
+                                            5,000 Sq. Ft.
+                                        </strong>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span>PROJECT TYPE</span>
+                                        <strong id="modalType">
+                                            Luxury Residence
+                                        </strong>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span>STATUS</span>
+                                        <strong id="modalStatus">
+                                            Completed
+                                        </strong>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span>DESIGN</span>
+                                        <strong id="modalDesign">
+                                            Architecture & Interior
+                                        </strong>
+                                    </div>
+
+                            </div>
+
+
+                            <!-- PROJECT FOOTER -->
+
+                                <div class="modal-footer">
+
+                                    <span>HUMSFAR ARCHITECTURE</span>
+
+                                    <span id="modalProjectNumber">
+                                        PROJECT 01
+                                    </span>
+
+                                </div>
+
+                        </div>
 
                 </div>
 
             </div>
 
-        </section>
+        <!-- =========================
+            FOOTER
+        ========================== -->
 
-    </main>
+                <footer>
+
+                <div class="footer-brand">
+                    LUXE Architecture
+                </div>
+
+                <div class="footer-copy">
+                    © 2026 LUXE Architecture
+                </div>
+
+                <div class="footer-tagline">
+                    Designed for extraordinary spaces.
+                </div>
+
+            </footer>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+                <script>
+                    function toggleMobileMenu() {
 
-    <footer>
+                        const nav = document.getElementById("mainNav");
 
-        <div>
-            © 2026 LUXE Architecture
-        </div>
+                        nav.classList.toggle("active");
+                    }
 
-        <div>
-            Designed for extraordinary spaces.
-        </div>
+                    document.querySelectorAll("#mainNav a").forEach(function(link) {
 
-    </footer>
+                        link.addEventListener("click", function() {
 
-</body>
+                            document.getElementById("mainNav").classList.remove("active");
+
+                        });
+
+                    });
+                
+                </script>
+
+                <script>
+
+                    const projects = {
+
+                        villa: {
+                            image: "image/photo-1600607688969-a5bfcd646154.avif",
+
+                            category: "RESIDENTIAL",
+
+                            title: "Villa No. 01",
+
+                            description:
+                                "A contemporary luxury residence designed with a strong connection between architecture, natural light and outdoor living. The project combines clean architectural lines, warm materials and carefully framed views to create a sophisticated yet comfortable family home.",
+
+                            location: "Islamabad, Pakistan",
+
+                            year: "2026",
+
+                            area: "5,000 Sq. Ft.",
+
+                            type: "Luxury Residence",
+
+                            status: "Completed",
+
+                            design: "Architecture & Interior",
+
+                            number: "PROJECT 01"
+                        },
+
+
+                        atrium: {
+                            image: "image/photo-1600607687920-4e2a09cf159d.avif",
+
+                            category: "INTERIOR",
+
+                            title: "The Atrium",
+
+                            description:
+                                "A sophisticated interior project focused on openness, natural light and refined material selection. The design creates a calm and elegant environment through balanced proportions, contemporary furniture and carefully integrated lighting.",
+
+                            location: "Islamabad, Pakistan",
+
+                            year: "2026",
+
+                            area: "3,500 Sq. Ft.",
+
+                            type: "Luxury Interior",
+
+                            status: "Completed",
+
+                            design: "Interior Design",
+
+                            number: "PROJECT 02"
+                        },
+
+
+                        casa: {
+                            image: "image/photo-1600607687939-ce8a6c25118c.avif",
+
+                            category: "ARCHITECTURE",
+
+                            title: "Casa Horizon",
+
+                            description:
+                                "A contemporary architectural residence defined by strong geometric forms, generous glazing and a refined material palette. The design creates a seamless relationship between the interior spaces, landscape and surrounding environment.",
+
+                            location: "Lahore, Pakistan",
+
+                            year: "2026",
+
+                            area: "6,200 Sq. Ft.",
+
+                            type: "Contemporary Residence",
+
+                            status: "Completed",
+
+                            design: "Architecture",
+
+                            number: "PROJECT 03"
+                        }
+
+                    };
+
+
+                    function openProject(projectName) {
+
+                        const project = projects[projectName];
+
+                        if (!project) return;
+
+
+                        document.getElementById("modalImage").src =
+                            project.image;
+
+                        document.getElementById("modalImage").alt =
+                            project.title;
+
+                        document.getElementById("modalCategory").textContent =
+                            project.category;
+
+                        document.getElementById("modalTitle").textContent =
+                            project.title;
+
+                        document.getElementById("modalDescription").textContent =
+                            project.description;
+
+                        document.getElementById("modalLocation").textContent =
+                            project.location;
+
+                        document.getElementById("modalYear").textContent =
+                            project.year;
+
+                        document.getElementById("modalArea").textContent =
+                            project.area;
+
+                        document.getElementById("modalType").textContent =
+                            project.type;
+
+                        document.getElementById("modalStatus").textContent =
+                            project.status;
+
+                        document.getElementById("modalDesign").textContent =
+                            project.design;
+
+                        document.getElementById("modalProjectNumber").textContent =
+                            project.number;
+
+
+                        document
+                            .getElementById("projectModal")
+                            .classList.add("show");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    function closeProject() {
+
+                        document
+                            .getElementById("projectModal")
+                            .classList.remove("show");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE TO CLOSE */
+
+                    document
+                        .getElementById("projectModal")
+                        .addEventListener("click", function (event) {
+
+                            if (event.target === this) {
+                                closeProject();
+                            }
+
+                        });
+
+
+                    /* ESC TO CLOSE */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (event.key === "Escape") {
+                            closeProject();
+                        }
+
+                    });
+
+                </script>
+
+    </body>
+
 </html>

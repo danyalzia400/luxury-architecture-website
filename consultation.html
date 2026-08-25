@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Consultation | Luxury Architecture</title>
+
+    <meta name="description"
+        content="Book a consultation with Luxury Architecture to discuss your architecture, interior design, visualization, landscape or renovation project.">
+
+             <header>
+
+                <a href="index.html" class="logo">
+                    LUXURY
+                </a>
+
+                <nav>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="index.html#services">
+                        Services
+                    </a>
+
+                    <a href="index.html#projects">
+                        Projects
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </nav>
+
+        </header>
+        
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f5;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 28px 6%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            z-index: 10;
+        }
+
+        .logo {
+            color: #ffffff;
+
+            font-size: 22px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+
+            font-size: 13px;
+            letter-spacing: 1px;
+
+            transition: opacity .3s ease;
+        }
+
+        nav a:hover {
+            opacity: .6;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 55vh;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 100px 6% 70px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, .42),
+                    rgba(0, 0, 0, .65)
+                ),
+                url("image/photo-1600607688969-a5bfcd646154.avif")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .section-number {
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #999;
+        }
+
+        .hero .section-number {
+            color: rgba(255,255,255,.75);
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 8vw, 110px);
+
+            font-weight: 400;
+
+            line-height: .9;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            font-size: 17px;
+
+            color: rgba(255,255,255,.88);
+        }
+
+
+        /* =========================================
+           CONTACT / FORM
+        ========================================= */
+
+        .contact-section {
+            padding: 110px 6%;
+        }
+
+        .contact-wrapper {
+            display: grid;
+
+            grid-template-columns: .75fr 1.25fr;
+
+            gap: 100px;
+
+            max-width: 1300px;
+
+            margin: auto;
+        }
+
+        .contact-intro h2 {
+            font-size: clamp(40px, 5vw, 70px);
+
+            font-weight: 400;
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            margin: 20px 0 30px;
+        }
+
+        .contact-intro p {
+            max-width: 500px;
+
+            color: #666;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .consultation-form {
+            border-top: 1px solid #d4d4d4;
+        }
+
+        .form-group {
+            padding: 25px 0;
+
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #888;
+
+            margin-bottom: 12px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            font-family: inherit;
+
+            font-size: 18px;
+
+            color: #171717;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+
+            resize: vertical;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaa;
+        }
+
+
+        /* =========================================
+           TWO COLUMN FORM
+        ========================================= */
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+        }
+
+
+        /* =========================================
+           SUBMIT
+        ========================================= */
+
+        .submit-row {
+            padding-top: 35px;
+        }
+
+        .submit-button {
+            border: 1px solid #171717;
+
+            background: transparent;
+
+            padding: 17px 35px;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition: all .3s ease;
+        }
+
+        .submit-button:hover {
+            background: #171717;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           INFO
+        ========================================= */
+
+        .info-section {
+            background: #171717;
+
+            color: #ffffff;
+
+            padding: 90px 6%;
+        }
+
+        .info-grid {
+            max-width: 1300px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 60px;
+        }
+
+        .info-item .section-number {
+            color: #888;
+
+            margin-bottom: 15px;
+        }
+
+        .info-item h3 {
+            font-size: 22px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+        .info-item p {
+            color: #aaa;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #111111;
+
+            color: #ffffff;
+
+            padding: 50px 6%;
+        }
+
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+
+            letter-spacing: 2px;
+        }
+
+        .footer-text {
+            color: #777;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 22px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 60vh;
+
+                padding: 90px 5% 55px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .contact-section {
+                padding: 80px 5%;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+            .info-section {
+                padding: 70px 5%;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            footer {
+                padding: 40px 5%;
+            }
+
+            .footer-content {
+                display: block;
+            }
+
+            .footer-text {
+                margin-top: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+            LUXURY
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#projects">
+                Projects
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="section-number">
+                Start Your Project
+            </div>
+
+            <h1>
+                Book a Consultation
+            </h1>
+
+            <p>
+                Tell us about your project and let's discuss how we
+                can bring your vision to life.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONSULTATION FORM
+    ========================================= -->
+
+    <section class="contact-section">
+
+        <div class="contact-wrapper">
+
+
+            <!-- INTRO -->
+
+            <div class="contact-intro">
+
+                <div class="section-number">
+                    01 — Consultation
+                </div>
+
+                <h2>
+                    Let's discuss
+                    your project.
+                </h2>
+
+                <p>
+                    Whether you are planning a new residence, redesigning
+                    an interior, visualizing an architectural concept,
+                    developing a landscape or renovating an existing
+                    property, tell us about your project.
+                </p>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form
+                class="consultation-form"
+                id="consultationForm">
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            required>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Your phone number">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Service
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            required>
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="Architecture">
+                                Architecture
+                            </option>
+
+                            <option value="Interior Design">
+                                Interior Design
+                            </option>
+
+                            <option value="3D Visualization">
+                                3D Visualization
+                            </option>
+
+                            <option value="Landscape Design">
+                                Landscape Design
+                            </option>
+
+                            <option value="Renovation">
+                                Renovation
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="project">
+                        Project Type
+                    </label>
+
+                    <input
+                        type="text"
+                        id="project"
+                        name="project"
+                        placeholder="Residential, commercial, villa, apartment, etc.">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Project Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="City / Area">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Tell Us About Your Project
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell us about your requirements, ideas, scope and project..."
+                        required></textarea>
+
+                </div>
+
+
+
+                <div class="submit-row">
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        Send Consultation Request →
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INFORMATION
+    ========================================= -->
+
+    <section class="info-section">
+
+        <div class="info-grid">
+
+
+            <div class="info-item">
+
+                <div class="section-number">
+                    01
+                </div>
+
+                <h3>
+                    Initial Discussion
+                </h3>
+
+                <p>
+                    We review your project requirements and understand
+                    your goals, expectations and design direction.
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <h3>
+                    Project Review
+                </h3>
+
+                <p>
+                    We discuss the scope, project type, location,
+                    timeline and services required.
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <h3>
+                    Next Steps
+                </h3>
+
+                <p>
+                    Once we understand your project, we can discuss
+                    the appropriate design process and next steps.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                LUXURY
+            </div>
+
+            <div class="footer-text">
+                © 2026 Luxury Architecture. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         FORM SCRIPT
+    ========================================= -->
+
+    <script>
+
+        document
+            .getElementById("consultationForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Thank you. Your consultation request has been received."
+                );
+
+                this.reset();
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
